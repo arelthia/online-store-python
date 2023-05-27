@@ -6,22 +6,21 @@
 # Cart
 - products
 
-# customer
+# Order
 - name
 - address
 - email
-
-# Order
-- customer
 - cart
+- products
 
 # Routes
 | Type | Route | DEscription |
 | --- | ---  | ---         |
 | GET  | /products | Get all products|
-| GET  | /cart | Get cart|
-| POST | /cart/product/:product_id  | Add product to cart|
-| DELETE  | /cart/product/:product_id | Remove product from cart|
+| GET  | /cart/:cart_id | Get cart|
+| POST | /cart  | Create cart|
+| PUT | /cart/:cart_id/product/:product_id  | Add product to cart|
+| DELETE  | /cart/:cart_id/product/:product_id | Remove product from cart|
 | POST | /order | create Order |
 | GET | /order/{id} | Get 1 order by id |
 
