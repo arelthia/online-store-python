@@ -1,0 +1,35 @@
+
+main {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.card-group{
+    width: 75%;
+}
+
+.card {
+    width: 320px;
+    min-width: 250px;
+}
+
+.card.cart,
+.card.product {
+    width: 100%;
+}
+
+.product-name {
+    width: 200px;
+}
+
+.small-thumb {
+    width: 48px;
+    height: 48px;
+}
+
+.hide{
+    display: none;
+}
