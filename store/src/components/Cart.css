@@ -1,0 +1,20 @@
+.cart .card-body .product-name{
+   width: 200px; 
+}
+
+.cart .product-price{
+    width: 60px;
+}
+
+.cart .product-delete{
+    
+}
+
+.cart .card-body {
+    text-align: left;
+    display: flex;
+    justify-content:start;
+    flex: 1 1 auto;
+    padding: 1rem;
+    
+  }
