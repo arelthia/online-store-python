@@ -4,7 +4,7 @@ import './ProductGrid.css';
 
 const ProductGrid = (props) => {
     const [products, setProducts] = useState();
-    
+    const {increaseCount} = props;
     useEffect(() => {
         async function getProducts(){
             const response = await fetch('http://localhost:8000/products');
@@ -20,7 +20,7 @@ const ProductGrid = (props) => {
         <div  className="card-group">
         {
             products && 
-                products.map(product => <Product key={product.id} product_id={product.id} name={product.product_name} price={product.product_price} image={product.product_image} />)
+                products.map(product => <Product key={product.id} product_id={product.id} name={product.product_name} price={product.product_price} image={product.product_image} onAdded={increaseCount}  />)
         }
         </div>
         

@@ -1,13 +1,14 @@
-import React, {useContext, useEffect} from 'react'
+import React, {useContext} from 'react'
 import OrderContext from  '../context/OrderContext';
 import CartProduct from './CartProduct';
 
-const CartProducts = () => {
-  const {order, setOrder, getCart, removeFromCart} = useContext(OrderContext);
+const CartProducts = (props) => {
+  const {order} = useContext(OrderContext);
+  const {onRemove} = props;
   return (
-    <div>
-      <h2>CartProducts</h2>
-      {order.products.map((product) => { return <CartProduct key={product.id} id={product.id} productName={product.product_name} productPrice={product.product_price} />  })}
+    <div className="cart-products">
+      <h2>Products</h2>
+      {order.products.map((product) => { return <CartProduct key={product.id} id={product.id} productName={product.product_name} productPrice={product.product_price} removeFromCount={onRemove} />  })}
       </div>
   )
 }

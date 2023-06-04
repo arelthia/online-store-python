@@ -7,9 +7,10 @@ import './Cart.css';
 
 const Cart = (props) => {
   const {order, setOrder, getCart} = useContext(OrderContext);
+  const {decreaseCount} = props;
   useEffect(() => {
     getCart();  
-  }, [order])
+  }, [])
  
   return (
     <div className='cart'>
@@ -18,7 +19,7 @@ const Cart = (props) => {
         <>
           <h2>Check Out</h2>
           <div className='cart-wrapper'>
-              <CartProducts />
+              <CartProducts onRemove={decreaseCount} />
               <CheckOutForm />
           </div>
         </>

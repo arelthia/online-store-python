@@ -46,3 +46,46 @@
    padding: 4px;
     margin: 5px;
 }
+
+
+.confirm{
+  display: flex;
+  justify-content: center;
+}
+
+.order-details {
+  width: 500px;
+  padding: 40px;
+}
+
+.order-details .split{
+  display: flex;
+}
+
+.order-details .split,
+.order-details .products{
+  text-align: left;
+}
+
+.order-details .products ul{
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+.order-details .products ul li{
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-details .products ul li span{
+  padding-right: 5px;
+}
+
+.customer p span {
+  font-weight: bold;
+}
+
+.customer{
+  text-align: left;
+  padding: 0 40px;
+}

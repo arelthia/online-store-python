@@ -3,9 +3,11 @@ import OrderContext from  '../context/OrderContext';
 import { deleteIcon } from './Icons.js';
 const CartProduct = (props) => {
     const {removeFromCart} = useContext(OrderContext);
+    const {removeFromCount} = props;
   const deleteItem = (event) =>{
     event.preventDefault();
     removeFromCart(props.id);
+    removeFromCount();
   }   
   return (
     <div className='card'>
