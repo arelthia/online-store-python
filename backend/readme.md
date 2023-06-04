@@ -40,6 +40,7 @@
 # Database
 1. Log into psql`psql`
 1. Create database `CREATE DATABASE onlinestoredb`
+1. Seed data `python seed.py`
 
 ## Dependencies
 1. Save dependencies `pip freeze > requirements.txt`
