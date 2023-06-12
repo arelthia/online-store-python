@@ -89,3 +89,28 @@
   text-align: left;
   padding: 0 40px;
 }
+
+
+/* breadcrumbs */
+.breadcrumbs {
+  max-width: 1200px;
+  margin: 20px;
+  text-align: left;
+  
+}
+.breadcrumbs > *{
+  display: inline-block;
+  margin-right: 5px;
+}
+.breadcrumbs .crumb:after {
+  content: '/';
+  margin-left: 10px;
+}
+.breadcrumbs .crumb:last-child:after {
+  display: none;
+}
+.breadcrumbs .crumb a {
+  color: #282c34;
+  text-transform: capitalize;
+  text-decoration: none;
+}
